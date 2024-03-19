@@ -6,10 +6,15 @@
  */
 var reduce = function (nums, fn, init) {
     // let init = init ?? nums[0]
-    let result = init
-    nums.forEach((value, index) => {
-        result = fn(result, value)
-    })
+    // let result = init
+    // nums.forEach((value, index) => {
+    //     result = fn(result, value)
+    // })
 
-    return result
+    let last = init;
+
+    last = nums.reduce(fn, last );
+    
+    return last;
+    // return result
 };
